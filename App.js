@@ -8,6 +8,7 @@ import {
   ScrollView,
   TouchableOpacity,
 } from 'react-native';
+import GopayFeature from './src/components/molecules/GopayFeature';
 import iconHome from './src/assets/icon/home-active.png';
 import iconOrder from './src/assets/icon/order.png';
 import iconHelp from './src/assets/icon/help.png';
@@ -28,6 +29,7 @@ import iconGoDeals from './src/assets/icon/go-deals.png';
 import iconGoPulsa from './src/assets/icon/go-pulsa.png';
 import iconGoFood from './src/assets/icon/go-food.png';
 import iconGoMore from './src/assets/icon/go-more.png';
+import MainFeature from './src/components/molecules/MainFeature';
 
 const App = () => {
   return (
@@ -89,54 +91,10 @@ const App = () => {
               borderBottomLeftRadius: 4,
               borderBottomRightRadius: 4,
             }}>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={iconPay} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Pay
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={iconNearby} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Nearby
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={iconTopUp} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                Top Up
-              </Text>
-            </View>
-            <View style={{flex: 1, alignItems: 'center'}}>
-              <Image source={iconMore} />
-              <Text
-                style={{
-                  fontSize: 13,
-                  fontWeight: 'bold',
-                  color: 'white',
-                  marginTop: 15,
-                }}>
-                More
-              </Text>
-            </View>
+            <GopayFeature title="Pay" img={iconPay} />
+            <GopayFeature title="Nearby" img={iconNearby} />
+            <GopayFeature title="Top Up" img={iconTopUp} />
+            <GopayFeature title="More" img={iconMore} />
           </View>
         </View>
         {/* Main Feature */}
@@ -151,200 +109,16 @@ const App = () => {
               flexDirection: 'row',
               justifyContent: 'space-between',
               width: '100%',
-              marginBottom: 18,
+              flexWrap: 'wrap',
             }}>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoRide} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-RIDE
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoCar} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-CAR
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColorr: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoBluebird} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-BLUEBIRD
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoSend} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-SEND
-              </Text>
-            </View>
-          </View>
-          <View
-            style={{
-              flexDirection: 'row',
-              justifyContent: 'space-between',
-              width: '100%',
-              marginBottom: 18,
-            }}>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoDeals} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-DEALS
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoPulsa} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-PULSA
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoFood} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                GO-FOOD
-              </Text>
-            </View>
-            <View style={{width: '25%', alignItems: 'center'}}>
-              <View
-                style={{
-                  width: 58,
-                  height: 58,
-                  border: 1,
-                  borderColor: 'black',
-                  borderRadius: 18,
-                  alignItems: 'center',
-                  justifyContent: 'center',
-                }}>
-                <Image source={iconGoMore} />
-              </View>
-              <Text
-                style={{
-                  fontSize: 11,
-                  fontWeight: 'bold',
-                  textAlign: 'center',
-                  marginTop: 6,
-                }}>
-                MORE
-              </Text>
-            </View>
+            <MainFeature title="GO-RIDE" img={iconGoRide} />
+            <MainFeature title="GO-CAR" img={iconGoCar} />
+            <MainFeature title="GO-BLUEBIRD" img={iconGoBluebird} />
+            <MainFeature title="GO-SEND" img={iconGoSend} />
+            <MainFeature title="GO-DEALS" img={iconGoDeals} />
+            <MainFeature title="GO-PULSA" img={iconGoPulsa} />
+            <MainFeature title="GO-FOOD" img={iconGoFood} />
+            <MainFeature title="MORE" img={iconGoMore} />
           </View>
         </View>
         {/* Line */}
@@ -737,14 +511,14 @@ const App = () => {
           </ScrollView>
         </View>
       </ScrollView>
-      <View
+      {/* <View
         style={{
           borderBottomWidth: 1,
           marginTop: 16,
           marginHorizontal: 16,
           marginBottom: 20,
         }}
-      />
+      /> */}
       <View style={styles.bottom}>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
           <Image style={{width: 26, height: 26}} source={iconHome} />
