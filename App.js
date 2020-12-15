@@ -586,11 +586,165 @@ const App = () => {
               borderBottomColor: '#E8E9ED',
               borderBottomWidth: 1,
               marginTop: 16,
-              marginBottom: 20,
             }}
           />
         </View>
+        {/* Nearby GO Food Section */}
+        <View>
+          <View style={{height: 15, width: 60, marginLeft: 16}}>
+            <Image
+              source={require('./src/assets/logo/go-food.png')}
+              style={{
+                width: undefined,
+                height: undefined,
+                resizeMode: 'contain',
+                flex: 1,
+              }}
+            />
+          </View>
+          <View
+            style={{
+              flexDirection: 'row',
+              justifyContent: 'space-between',
+              marginBottom: 16,
+              paddingHorizontal: 16,
+            }}>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#1C1C1C'}}>
+              Nearby Restaurant
+            </Text>
+            <Text style={{fontSize: 17, fontWeight: 'bold', color: '#61A756'}}>
+              See All
+            </Text>
+          </View>
+          <ScrollView
+            horizontal
+            style={{flexDirection: 'row', paddingLeft: 16, marginBottom: 30}}>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150, borderRadius: 10}}>
+                <Image
+                  source={require('./src/assets/dummy/go-food-kfc.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 4,
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 12,
+                }}>
+                KFC Aeon Mall
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150, borderRadius: 10}}>
+                <Image
+                  source={require('./src/assets/dummy/go-food-gm.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 4,
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 12,
+                }}>
+                Bakmi GM
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150, borderRadius: 10}}>
+                <Image
+                  source={require('./src/assets/dummy/go-food-orins.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 4,
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 12,
+                }}>
+                Martabak Orins
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150, borderRadius: 10}}>
+                <Image
+                  source={require('./src/assets/dummy/go-food-banka.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 4,
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 12,
+                }}>
+                Martabak Banka
+              </Text>
+            </View>
+            <View style={{marginRight: 16}}>
+              <View style={{width: 150, height: 150, borderRadius: 10}}>
+                <Image
+                  source={require('./src/assets/dummy/go-food-pak-boss.jpg')}
+                  style={{
+                    width: undefined,
+                    height: undefined,
+                    resizeMode: 'cover',
+                    borderRadius: 4,
+                    flex: 1,
+                  }}
+                />
+              </View>
+              <Text
+                style={{
+                  fontSize: 16,
+                  fontWeight: 'bold',
+                  color: '#1C1C1C',
+                  marginTop: 12,
+                }}>
+                Ayam Bakar Pak Boss
+              </Text>
+            </View>
+          </ScrollView>
+        </View>
       </ScrollView>
+      <View
+        style={{
+          borderBottomWidth: 1,
+          marginTop: 16,
+          marginHorizontal: 16,
+          marginBottom: 20,
+        }}
+      />
       <View style={styles.bottom}>
         <View style={{flex: 1, alignItems: 'center', justifyContent: 'center'}}>
           <Image style={{width: 26, height: 26}} source={iconHome} />
