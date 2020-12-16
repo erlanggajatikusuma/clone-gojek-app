@@ -1,7 +1,7 @@
 import React from 'react';
 import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
-const GoNews = () => {
+const GoNews = ({onPress}) => {
   return (
     <View style={{paddingTop: 16, paddingHorizontal: 16}}>
       <View style={{position: 'relative'}}>
@@ -22,7 +22,7 @@ const GoNews = () => {
         <Text style={styles.textInfo}>
           Dimas Drajat selamatkan penalti, Timnas U-23 kalah
         </Text>
-        <TouchableOpacity style={styles.btnWrapper}>
+        <TouchableOpacity style={styles.btnWrapper} onPress={onPress}>
           <Text style={styles.btn}>READ</Text>
         </TouchableOpacity>
       </View>
