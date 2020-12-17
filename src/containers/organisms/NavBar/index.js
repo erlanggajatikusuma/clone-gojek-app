@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {View, StyleSheet} from 'react-native';
+import {withNavigation} from 'react-navigation';
 import NavBarIcon from '../../../components/molecules/NavBarIcon';
 import iconHome from '../../../assets/icon/home-active.png';
 import iconOrder from '../../../assets/icon/order.png';
@@ -11,11 +12,32 @@ export class NavBar extends Component {
   render() {
     return (
       <View style={styles.bottom}>
-        <NavBarIcon title="Home" img={iconHome} active />
-        <NavBarIcon title="Orders" img={iconOrder} />
-        <NavBarIcon title="Help" img={iconHelp} />
-        <NavBarIcon title="Inbox" img={iconInbox} />
-        <NavBarIcon title="Account" img={iconAccount} />
+        <NavBarIcon
+          onPress={() => this.props.navigation.navigate('Home')}
+          title="Home"
+          img={iconHome}
+          active
+        />
+        <NavBarIcon
+          onPress={() => this.props.navigation.navigate('Orders')}
+          title="Orders"
+          img={iconOrder}
+        />
+        <NavBarIcon
+          onPress={() => this.props.navigation.navigate('')}
+          title="Help"
+          img={iconHelp}
+        />
+        <NavBarIcon
+          onPress={() => this.props.navigation.navigate('')}
+          title="Inbox"
+          img={iconInbox}
+        />
+        <NavBarIcon
+          onPress={() => this.props.navigation.navigate('')}
+          title="Account"
+          img={iconAccount}
+        />
       </View>
     );
   }
@@ -31,4 +53,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default NavBar;
+export default withNavigation(NavBar);

@@ -10,7 +10,7 @@ import NavBar from '../../../containers/organisms/NavBar';
 import HomeMainFeature from '../../../containers/organisms/HomeMainFeature';
 import HomeGoPay from '../../../containers/organisms/HomeGoPay';
 
-export class Home extends Component {
+class Home extends Component {
   render() {
     return (
       <View style={styles.container}>

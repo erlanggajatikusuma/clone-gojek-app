@@ -17,4 +17,10 @@ const App = () => {
   return <Router />;
 };
 
+// class App extends Component {
+//   render() {
+//     return <Router />;
+//   }
+// }
+
 export default App;
