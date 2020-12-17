@@ -35,13 +35,9 @@ const IconAction = () => {
 };
 
 class ScanQRCode extends React.Component {
-  //   takePicture = async () => {
-  //     if (this.camera) {
-  //       const options = {quality: 0.5, base64: true};
-  //       const data = await this.camera.takePictureAsync(options);
-  //       console.log(data.uri);
-  //     }
-  //   };
+  state = {
+    barcode: 'More Options',
+  };
   render() {
     return (
       <View style={{flex: 1}}>
@@ -65,8 +61,11 @@ class ScanQRCode extends React.Component {
               buttonPositive: 'Ok',
               buttonNegative: 'Cancel',
             }}
-            onGoogleVisionBarcodesDetected={({barcodes}) => {
-              console.log(barcodes);
+            onBarCodeRead={(barcode) => {
+              console.log(barcode);
+              this.setState({
+                barcode: barcode.data,
+              });
             }}
           />
           <View
@@ -131,7 +130,7 @@ class ScanQRCode extends React.Component {
               alignItems: 'center',
             }}>
             <Text style={{fontSize: 20, fontWeight: 'bold', color: 'black'}}>
-              More Options
+              {`${this.state.barcode}`}
             </Text>
             <Text style={{fontSize: 14, color: '#61A756', fontWeight: 'bold'}}>
               Shortcut
@@ -158,7 +157,8 @@ class ScanQRCode extends React.Component {
             <View style={{width: 1, height: 60, backgroundColor: 'grey'}} />
             <View style={{flex: 1, paddingLeft: 12}}>
               <Text>
-                Your recent GoPay receivers will show here. No admin fees!
+                barcodes Your recent GoPay receivers will show here. No admin
+                fees!
               </Text>
             </View>
           </View>
