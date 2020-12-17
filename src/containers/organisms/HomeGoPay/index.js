@@ -1,5 +1,6 @@
 import React, {Component} from 'react';
 import {StyleSheet, Text, View, Image} from 'react-native';
+import {withNavigation} from 'react-navigation';
 import gopay from '../../../assets/icon/gopay.png';
 import iconPay from '../../../assets/icon/pay.png';
 import iconNearby from '../../../assets/icon/nearby.png';
@@ -7,7 +8,7 @@ import iconTopUp from '../../../assets/icon/topup.png';
 import iconMore from '../../../assets/icon/more.png';
 import GopayFeature from '../../../components/molecules/GopayFeature';
 
-export class HomeGoPay extends Component {
+class HomeGoPay extends Component {
   render() {
     return (
       <View style={{marginHorizontal: 17, marginTop: 18}}>
@@ -18,7 +19,11 @@ export class HomeGoPay extends Component {
           </Text>
         </View>
         <View style={styles.goPayFeatureWrapper}>
-          <GopayFeature title="Pay" img={iconPay} />
+          <GopayFeature
+            onPress={() => this.props.navigation.navigate('ScanQRCode')}
+            title="Pay"
+            img={iconPay}
+          />
           <GopayFeature title="Nearby" img={iconNearby} />
           <GopayFeature title="Top Up" img={iconTopUp} />
           <GopayFeature title="More" img={iconMore} />
@@ -47,4 +52,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default HomeGoPay;
+export default withNavigation(HomeGoPay);

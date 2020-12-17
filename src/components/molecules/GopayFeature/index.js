@@ -1,11 +1,13 @@
 import React from 'react';
-import {StyleSheet, Text, View, Image} from 'react-native';
+import {StyleSheet, Text, View, Image, TouchableOpacity} from 'react-native';
 
 const GopayFeature = (props) => {
   return (
     <View style={styles.wrapper}>
-      <Image source={props.img} />
-      <Text style={styles.textTitle}>{props.title}</Text>
+      <TouchableOpacity onPress={props.onPress}>
+        <Image source={props.img} />
+        <Text style={styles.textTitle}>{props.title}</Text>
+      </TouchableOpacity>
     </View>
   );
 };
@@ -22,5 +24,6 @@ const styles = StyleSheet.create({
     fontWeight: 'bold',
     color: 'white',
     marginTop: 15,
+    textAlign: 'center',
   },
 });
